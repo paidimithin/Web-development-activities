@@ -1,1 +1,284 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineWorld - Movie Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        header {
+            background: #1f2937;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h1 {
+            color: #facc15;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #7f1d1d, #111827);
+        }
+
+        .hero h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+        }
+
+        .search {
+            padding: 12px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .movies {
+            padding: 30px;
+        }
+
+        .movies h2 {
+            margin-bottom: 25px;
+            color: #facc15;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .movie-card {
+            background: #1f2937;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 18px;
+        }
+
+        .movie-info h3 {
+            color: #facc15;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .rating {
+            color: #facc15;
+            font-weight: bold;
+        }
+
+        .review {
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .button {
+            display: inline-block;
+            background: #e11d48;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 12px;
+        }
+
+        .button:hover {
+            background: #be123c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1f2937;
+            margin-top: 30px;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+
+            .movies {
+                padding: 20px;
+            }
+
+            .movie-card img {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>🎬 CineWorld</h1>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#movies">Movies</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Discover Your Favorite Movies</h2>
+        <p>Explore movies, ratings, reviews and exciting stories.</p>
+        <input type="text" class="search"
+               placeholder="Search your favorite movie...">
+    </section>
+
+    <section class="movies" id="movies">
+        <h2>Popular Movies</h2>
+
+        <div class="movie-grid">
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                     alt="Oppenheimer Poster">
+
+                <div class="movie-info">
+                    <h3>Oppenheimer</h3>
+                    <p><b>Genre:</b> Biography, Drama</p>
+                    <p><b>Release:</b> July 21, 2023</p>
+                    <p><b>Cast:</b> Cillian Murphy, Emily Blunt</p>
+                    <p><b>Synopsis:</b> The story of scientist J. Robert
+                    Oppenheimer and the development of the atomic bomb.</p>
+                    <p class="rating">8.3 / 10</p>
+                    <p class="review">Critics: "A powerful cinematic experience."</p>
+                    <a href="https://www.imdb.com/title/tt15398776/"
+                       class="button" target="_blank">View Movie</a>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
+                     alt="Dune Part Two Poster">
+
+                <div class="movie-info">
+                    <h3>Dune: Part Two</h3>
+                    <p><b>Genre:</b> Sci-Fi, Adventure</p>
+                    <p><b>Release:</b> March 1, 2024</p>
+                    <p><b>Cast:</b> Timothee Chalamet, Zendaya</p>
+                    <p><b>Synopsis:</b> Paul Atreides joins the Fremen
+                    and begins his journey toward destiny.</p>
+                    <p class="rating">8.5 / 10</p>
+                    <p class="review">Critics: "An epic visual masterpiece."</p>
+                    <a href="https://www.imdb.com/title/tt15239678/"
+                       class="button" target="_blank">View Movie</a>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+                     alt="Deadpool and Wolverine Poster">
+
+                <div class="movie-info">
+                    <h3>Deadpool & Wolverine</h3>
+                    <p><b>Genre:</b> Action, Comedy</p>
+                    <p><b>Release:</b> July 26, 2024</p>
+                    <p><b>Cast:</b> Ryan Reynolds, Hugh Jackman</p>
+                    <p><b>Synopsis:</b> Deadpool teams up with Wolverine
+                    on an unexpected multiverse adventure.</p>
+                    <p class="rating">7.5 / 10</p>
+                    <p class="review">Critics: "A fun superhero adventure."</p>
+                    <a href="https://www.imdb.com/title/tt6263850/"
+                       class="button" target="_blank">View Movie</a>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"
+                     alt="Interstellar Poster">
+
+                <div class="movie-info">
+                    <h3>Interstellar</h3>
+                    <p><b>Genre:</b> Sci-Fi, Drama</p>
+                    <p><b>Release:</b> November 7, 2014</p>
+                    <p><b>Cast:</b> Matthew McConaughey, Anne Hathaway</p>
+                    <p><b>Synopsis:</b> Astronauts travel through a wormhole
+                    to search for a new home for humanity.</p>
+                    <p class="rating">8.7 / 10</p>
+                    <p class="review">Critics: "An unforgettable space journey."</p>
+                    <a href="https://www.imdb.com/title/tt0816692/"
+                       class="button" target="_blank">View Movie</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="movies" id="about">
+        <h2>About CineWorld</h2>
+        <p>CineWorld is a movie discovery website where users can
+        explore films, discover genres, read movie descriptions
+        and check ratings.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 CineWorld | Movie Lovers Community</p>
+    </footer>
+
+</body>
+</html>
+
